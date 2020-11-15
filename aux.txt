@@ -1,0 +1,13 @@
+comando 01
+thrift --gen java valor.thrift
+
+comando 02
+javac -cp jars/libthrift-0.13.0.jar:jars/slf4j-api-1.7.21.jar:jars/javax.annotation-api-1.3.2.jar:gen-java -d . *.java
+
+
+comando 03
+java -cp jars/libthrift-0.13.0.jar:jars/slf4j-api-1.7.21.jar:jars/javax.annotation-api-1.3.2.jar:gen-java:. valor.Server
+
+
+comando 04
+java -cp jars/libthrift-0.13.0.jar:jars/slf4j-api-1.7.21.jar:jars/javax.annotation-api-1.3.2.jar:gen-java:. valor.Cliente
